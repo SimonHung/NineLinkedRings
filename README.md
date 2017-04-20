@@ -1,5 +1,5 @@
 # Chinese Nine Linked Rings Puzzle (九連環)
-=======================================
+
 This program build with Javascript + [KineticJS](http://kineticjs.com).
 
 ## PLAY
