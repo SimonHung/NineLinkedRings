@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>九連環(Nine Linked Rings)</title>
+<meta http-equiv="X-UA-Compatible" content="chrome=1, IE=edge">
+<meta name="description" content="Chinese Nine Linked Rings 九連環">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="nineLinkedRings.ico"  rel="shortcut icon" >
+<style>
+	body {
+		margin: 1px;
+		padding: 1px;
+	}
+	#hints, #random, #reset, #auto, #stop   {
+		width: 80px;
+		padding: 5px;
+		display: block;
+		margin-top: 5px;
+	}
+	#textRings, #textMode, #textSpeed, input, select {
+		font:  14px arial;
+		visibility: hidden;
+	}
+	#stop {
+		display: none;
+	}
+</style>
+<script src="kineticJS/kinetic-v4.5.0.min.js"></script>
+<script src="nineLinkedRings.js"></script>
+</head>
+<body> 
+<div id="container"></div>
+<div id="selectDiv">
+<table id="selectTable"  border="0">
+	<tr>
+	<td id="textRings" align="right">Rings:</td>
+	<td><select id="rings" onchange="setNumOfRings(this.value);">
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+	</select></td>
+	</tr>
+	<tr>
+	<td id="textMode" align="right">Play Mode:</td>
+	<td><select id="mode" onchange="setPlayMode(this.value);">
+		<option value="0">All Rings Down</option>
+		<option value="1">All Rings Up</option>
+	</select></td>
+	</tr>
+	<tr>
+	<td id="textSpeed" align="right">Speed:</td>
+	<td><select id="speed" onchange="setPlaySpeed(this.value);">
+		<option value="0">very fast</option>
+		<option value="1">fast</option>
+		<option value="2">medium</option>
+		<option value="3">slow</option>
+		<option value="4">very slow</option>
+	</select></td>
+	</tr>	
+</table>	
+</div>
+<div id="resetDiv"><input type="button" id="reset" onclick="resetButton();" value="Reset"></div>
+<div id="randomDiv"><input type="button" id="random" onclick="randomButton();" value="Random"></div>
+<div id="hintsDiv"><input type="button" id="hints" onclick="hintsButton();" value="Hints"></div>
+<div id="autoDiv"><input type="button" id="auto" onclick="autoButton();" value="Auto"></div>
+<div id="stopDiv"><input type="button" id="stop" onclick="stopButton();" value="Stop"></div>
+</body>
+</html>
